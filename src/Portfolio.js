@@ -1,7 +1,7 @@
 // Portfolio.js
 import React, { useEffect, useRef, useState } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin, FaCalendarAlt, FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaFacebookF,FaGithub, FaTwitter, FaInstagram, FaLinkedin, FaCalendarAlt, FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { FaPalette, FaYoutube, FaDumbbell, FaDesktop } from 'react-icons/fa';
 import profilePic from '../src/img/profile_pic.jpg';
 import user_profilePic1 from '../src/img/user1.jpeg';
@@ -223,14 +223,14 @@ const Portfolio = () => {
                                     <FaFacebookF />
                                 </a>
 
-                                {/* Twitter */}
+                                {/* Github */}
                                 <a
-                                    href="#"
+                                    href="https://github.com/leoking01996/"
                                     className="btn btn-light btn-sm rounded-circle"
                                     data-bs-toggle="tooltip"
                                     title="Twitter"
                                 >
-                                    <FaTwitter />
+                                    <FaGithub />
                                 </a>
 
                                 {/* Instagram */}
@@ -497,40 +497,32 @@ const Portfolio = () => {
                     </div>
                     <div className="row">
                         {recommendations.map((rec, index) => (
-<div className="col-md-6 col-lg-4 mb-4" key={index}>
-  <div className="card p-4 h-100 shadow-sm border-0 text-center">
-    
-    {/* Profile Image */}
-    <img
-      src={rec.image}
-      alt={rec.name}
-      className="rounded-circle mx-auto mb-3"
-      width="90"
-      height="90"
-      style={{ objectFit: "cover" }}
-    />
-
-    {/* Personal Info */}
-    <h2 className="fw-bold mb-1">{rec.name}</h2>
-
-    <p className="text-muted fw-bold mb-1">
-      {rec.title}
-    </p>
-
-    <small className="text-muted d-block mb-3">
-      {rec.date} • {rec.relation}
-    </small>
-
-    {/* Message */}
-    <p
-      className="text-muted mb-0"
-      style={{ fontSize: "0.95rem" }}
-    >
-      {rec.message}
-    </p>
-
-  </div>
-</div>
+    <div className="col-md-6 col-lg-4 mb-4" key={index}>
+      <div className="card p-4 h-100 shadow-sm border-0">
+        <div className="d-flex align-items-start">
+          <img
+            src={rec.image}
+            alt={rec.name}
+            className="rounded-circle me-3"
+            width="60"
+            height="60"
+            style={{ objectFit: "cover" }}
+          />
+          <div>
+            <h2 className="mb-0 fw-bold">{rec.name}</h2>
+            <p className="text-muted fw-bold mb-1">{rec.title}</p>
+            <small className="text-muted">
+              {rec.date}, {rec.relation}
+            </small>
+          </div>
+        </div>
+        <div className="mt-3">
+          <p className="text-muted mb-0" style={{ fontSize: "0.95rem" }}>
+            {rec.message}
+          </p>
+        </div>
+      </div>
+    </div>
   ))}
                     </div>
                 </div>

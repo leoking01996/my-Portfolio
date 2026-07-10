@@ -66,11 +66,11 @@ else if(data === 'gym_pro'){
 
 }
 else if(data === 'hridaya'){
-     window.open('https://astonishing-mooncake-97de0a.netlify.app/', '_blank');
+     window.open('https://hridaya-customer-contactus.netlify.app', '_blank');
 
 }
 else if(data === 'hridayaAdminPortal'){
-     window.open('https://hridaya-admin.netlify.app/', '_blank');
+     window.open('https://hridaya-admin-latest.netlify.app/', '_blank');
 
 }
 

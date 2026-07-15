@@ -66,7 +66,7 @@ else if(data === 'gym_pro'){
 
 }
 else if(data === 'hridaya'){
-     window.open('https://hridaya-customer-contactus.netlify.app', '_blank');
+     window.open('https://hirdaya-customer-frontend.netlify.app/', '_blank');
 
 }
 else if(data === 'hridayaAdminPortal'){
